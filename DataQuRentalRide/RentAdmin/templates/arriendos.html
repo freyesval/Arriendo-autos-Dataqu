@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Arriendos</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Cliente</th>
+                <th>Nombre de la Empresa</th>
+                <th>Costo Diario</th>
+                <th>Días</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for arriendo in arriendos %}
+            <tr>
+                <td>{{ arriendo.id_cliente.name }}</td>
+                <td>{{ arriendo.id_empresa.name }}</td>
+                <td>{{ arriendo.costo_diario }}</td>
+                <td>{{ arriendo.dias }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

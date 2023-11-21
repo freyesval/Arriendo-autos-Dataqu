@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataQu Rental admin</title>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="{% url 'clientes' %}">Clientes</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'empresas' %}">Empresas</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'arriendos' %}">Registros</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Aquí puedes agregar el código para mostrar los indicadores -->
+  <div class="container">
+    <h2>Indicadores</h2>
+    <p>Total de arriendos del mes: {{ total_arriendos_mes }}</p>
+    <p>Cliente con mayor monto en arriendo: {{ cliente_mayor_monto }}</p>
+    <p>Cliente con menor monto en arriendo: {{ cliente_menor_monto }}</p>
+    <br>
+    <!-- Aquí puedes agregar el código para la búsqueda de empresas y visualización de estadísticas -->
+  </div>
+  <div class="container">
+    <h2>Funcionalidades</h2>
+    <a href="{% url 'clientes' %}" class="btn btn-secondary">Lista de clientes</a>
+    <a href="{% url 'clientes_ordenados' %}" class="btn btn-secondary">Lista de clientes ordenados por apellido</a>
+    <a href="{% url 'clientes_ordenados_gastos' %}" class="btn btn-secondary">Clientes ordenados según gastos</a>
+    <a href="{% url 'getCompanyClientsSortByName' %}" class="btn btn-secondary">Lista de empresas con rut de clientes</a>
+    <br>
+    <br>
+    <a href="{% url 'getClientsSortByAmount' 1 %}" class="btn btn-secondary">Lista de clientes ordenados por gastos Empresa 1</a>
+    <br>
+    <a href="{% url 'getClientsSortByAmount' id_empresa=2 %}" class="btn btn-secondary">Lista de clientes ordenados por gastos Empresa 2</a>
+    <br>
+    <a href="{% url 'getClientsSortByAmount' id_empresa=3 %}" class="btn btn-secondary">Lista de clientes ordenados por gastos Empresa 3</a>
+    <br>
+    <br>
+    <a href="{% url 'getCompaniesSortByProfits' %}" class="btn btn-secondary">Lista de empresas ordenada por ganancias</a>
+    <a href="{% url 'getCompaniesWithRentsOver1Week' %}" class="btn btn-secondary">Candidad de clientes por empresa</a>
+    <a href="{% url 'getClientsWithLessExpense' %}" class="btn btn-secondary">Empresas y id de clientes que menos gastan</a>
+    <br>
+    <br>
+    <a href="{% url 'agregar_cliente_arriendo' %}" class="btn btn-secondary">Agregar nuevo cliente y arriendo</a>
+  </div>
+
+  <div class="div">
+    <img src="{% static 'grafico.png' %}" alt="Gráfico">
+  </div>
+  
+</body>
+</html>

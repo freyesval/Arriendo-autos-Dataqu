@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empresas</title>
+</head>
+<body>
+    <h1>Empresas</h1>
+    {% for empresa, clientes in data.items %}
+    <h2>{{ empresa }}</h2>
+    <ul>
+        {% for cliente in clientes %}
+        <li>{{ cliente }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>

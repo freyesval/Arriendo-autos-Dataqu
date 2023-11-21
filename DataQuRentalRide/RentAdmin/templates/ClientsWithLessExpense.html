@@ -1,0 +1,6 @@
+<h2>Empresas y ID del cliente con el que menos han ganado</h2>
+  <ul>
+    {% for nombre, id_cliente in diccionario_empresas.items %}
+      <li>{{ nombre }}: {{ id_cliente }}</li>
+    {% endfor %}
+  </ul>

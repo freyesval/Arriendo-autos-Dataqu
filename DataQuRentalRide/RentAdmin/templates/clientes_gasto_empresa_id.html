@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <ul>
+        {% for rut, total_gastado in data.items %}
+        <li>RUT: {{ rut }}, Total Gastado: ${{ total_gastado }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    {% if ranking %}
+    <p>El nuevo cliente ocupa el lugar número {{ ranking }}.</p>
+    {% endif %}
+</body>
+</html>

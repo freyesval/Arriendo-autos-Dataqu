@@ -1,0 +1,6 @@
+<h2>Empresas y cantidad de clientes con arriendos de más de una semana</h2>
+  <ul>
+    {% for nombre, cantidad in diccionario_empresas.items %}
+      <li>{{ nombre }}: {{ cantidad }}</li>
+    {% endfor %}
+  </ul>

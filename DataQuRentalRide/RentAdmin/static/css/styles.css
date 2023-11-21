@@ -1,0 +1,47 @@
+
+table td,
+table th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+tbody td {
+    font-weight: 500;
+    color: #999999;
+}
+.container{
+    background:#fff;
+    border-radius:5px;
+    margin-top:10px;
+}
+body{
+    background:#0000008a;
+}
+nav {
+    background-color: #404040; 
+    padding: 15px;
+    border-bottom: outset;
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: rgb(6, 58, 77); 
+    background-color: white;
+    border-radius: 2px;
+}
+    footer {
+    background-color: #404040; 
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    border-top: inset;
+}

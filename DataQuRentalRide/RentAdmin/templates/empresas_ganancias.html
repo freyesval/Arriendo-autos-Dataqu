@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empresas</title>
+</head>
+<body>
+    <h1>Empresas</h1>
+    <ul>
+        {% for empresa, total_ingresos in data.items %}
+        <li>Empresa: {{ empresa }}, Total de Ingresos: ${{ total_ingresos }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

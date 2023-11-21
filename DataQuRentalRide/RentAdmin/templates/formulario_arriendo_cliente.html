@@ -1,0 +1,13 @@
+<h2>Agregar nuevo cliente y arriendo</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form_cliente.as_p }}
+    <br>
+    <br>
+    <!-- {{ form_arriendo.as_p }} -->
+    <button type="submit">Agregar</button>
+  </form>
+  <p>
+    Al oprimir el botón Agregar, se creará el nuevo cliente creando, adicionalmente, un nuevo registro de arriendo con el cliente creado para que arriende en la empresa AUTOK S.A
+  </p>
+  <p> Finalmente se mostrará el ranking de clientes que tiene la empresa para mostrar el puesto que ocupa el nuevo cliente</p>

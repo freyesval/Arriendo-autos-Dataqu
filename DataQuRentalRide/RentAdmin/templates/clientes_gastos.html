@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>RUT</th>
+                <th>Total Gastado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.name }}</td>
+                <td>{{ cliente.rut }}</td>
+                <td>{{ cliente.total_gastado }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

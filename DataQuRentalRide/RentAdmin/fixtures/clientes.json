@@ -1,0 +1,81 @@
+[ 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 1, 
+            "rut": "18620855-1", 
+            "name": "Angel Serrano" 
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 2, 
+            "rut": "11345435-2", 
+            "name": "Roser Abreu"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 3, 
+            "rut": "14256777-k", 
+            "name": "Rosa Campos"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 4, 
+            "rut": "12675688-0", 
+            "name": "Celestino Fuentes"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 5, 
+            "rut": "14234334-4", 
+            "name": "Rebeca Rojas"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 6, 
+            "rut": "10152323-8", 
+            "name": "Andrea Palomo"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 7, 
+            "rut": "15587715-4", 
+            "name": "Maria Inmaculada Jiménez"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+            "fields": {
+            "id": 8, 
+            "rut": "15034590-7", 
+            "name": "Marcela Navarro"}
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 9, 
+            "rut": "11804345-3", 
+            "name": "Francisco Manuel Gago"
+        }
+    }, 
+    {
+        "model": "RentAdmin.Cliente",
+        "fields": {
+            "id": 10, 
+            "rut": "13804238-0", 
+            "name": "Patricio Duran"
+        }
+    }
+]
